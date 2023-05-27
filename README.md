@@ -20,3 +20,7 @@ After building the project, you can view the documentation in your browser by op
 ```bash
 cargo doc --open
 ```
+
+## GitHub Pages
+
+The documentation of this project is available at <https://introductiontorust.github.io/stack_trait>.
