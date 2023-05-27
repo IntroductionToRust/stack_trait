@@ -7,6 +7,14 @@ use std::fmt::Display;
 ///  - `PartialEq` since we want to support `assert_eq` in our code examples
 ///  - `Clone` since an implementation of `Stack<T>` is required to implement trait `Clone`
 ///  - `Display` since an implementation of `Stack<T>` is required to implement trait `Display`
+///
+/// # Dependency
+/// 
+///  You can add the following line in section `[dependency]` of your `Cargo.toml`:
+///
+/// `stack_trait = {version = "*", git = "https://github.com/IntroductionToRust/stack_trait" }`
+
+
 pub trait Stack<T: Debug + PartialEq + Clone + Display>:
     Debug + Display + Clone + PartialEq
 {
