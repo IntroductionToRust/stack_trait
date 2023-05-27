@@ -6,7 +6,7 @@ cargo build
 cargo doc
 git rm -r docs || echo "Apparently first run .. ignoring error"
 mv target/doc docs
-echo '<meta http-equiv="refresh" content="0; url=stack_trait/index.html">' > doc/index.html
+echo '<meta http-equiv="refresh" content="0; url=stack_trait/index.html">' > docs/index.html
 echo "" > docs/.nojekyll
 cat >  docs/_config.yml <<EOF
 title: Cayman theme
