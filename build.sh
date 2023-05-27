@@ -22,5 +22,5 @@ cargo clippy  -- -D clippy::pedantic
 cargo check --all
 cargo audit
 cargo deny check --config deny.toml
-cargo doc
 cargo test
+cargo doc

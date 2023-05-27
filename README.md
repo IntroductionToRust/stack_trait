@@ -13,4 +13,10 @@ To check, build, and document, just execute:
 
 This command will fail, in case not all required tools are installed. Please install the missing tools with the help of `cargo`.
 
-## Checks
+## Documentation
+
+After building the project, you can view the documentation in your browser by opening the following file `target/doc/stack_trait/index.html` or by executing:
+
+```bash
+cargo doc --open
+```
