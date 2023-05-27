@@ -13,7 +13,7 @@ pub trait Stack<T: Debug + PartialEq + Clone + Display>:
     /// Create a new monomorphic stack storing elements of type `<T>`.
     /// # Example
     ///
-    /// ```compile_fail
+    /// ```ignore
     /// // We need to import this trait to use the methods of this trait.
     /// // We can import an implementation like `ll_stack`
     /// use stack_trait::Stack;
@@ -30,7 +30,7 @@ pub trait Stack<T: Debug + PartialEq + Clone + Display>:
     ///
     /// # Example
     ///
-    /// ```compile_fail
+    /// ```ignore
     /// // We need to import this trait to use the methods of this trait.
     /// // We can import an implementation like `ll_stack`
     /// use stack_trait::Stack;
@@ -53,7 +53,7 @@ pub trait Stack<T: Debug + PartialEq + Clone + Display>:
     ///
     /// # Example
     ///
-    /// ```compile_fail
+    /// ```ignore
     /// // We need to import this trait to use the methods of this trait.
     /// // We can import an implementation like `ll_stack`
     /// use stack_trait::Stack;
@@ -74,7 +74,11 @@ pub trait Stack<T: Debug + PartialEq + Clone + Display>:
     ///
     /// # Example
     ///
-    /// ```compile_fail
+    /// ```ignore
+    /// use stack_trait::Stack;
+    /// use ll_stack::GenericStack;
+    /// // We create a stack of u128
+    /// let mut stack : GenericStack<u128> = GenericStack::new();
     ///     println!("Top element: {:?}", stack.peek());
     /// ```
     fn peek(&self) -> Option<&T>;
@@ -84,8 +88,12 @@ pub trait Stack<T: Debug + PartialEq + Clone + Display>:
     ///
     /// # Example
     ///
-    /// ```compile_fail
-    ///   stack.peek_mut().map(|node| node.value += 1);
+    /// ```ignore
+    /// use stack_trait::Stack;
+    /// use ll_stack::GenericStack;
+    /// // We create a stack of u128
+    /// let mut stack : GenericStack<u128> = GenericStack::new();
+    ///   stack.peek_mut().map(|value| { *value += 1; } );
     /// ```
 
     fn peek_mut(&mut self) -> Option<&mut T>;
